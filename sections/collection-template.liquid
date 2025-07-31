@@ -1,0 +1,670 @@
+{% if section.settings.tags_enable and section.settings.sort_enable %}
+<style>
+@media only screen and (max-width: 767px) {
+	.collection-page--sort-by{
+		margin-top: 20px;
+	}
+}
+</style>
+{% endif %}
+
+{% if section.settings.collection_image_enable %}
+	<style>
+	#main-navigation-wrapper{
+		margin-bottom: 0px;
+	}
+	</style>
+
+	{% if collection.image %}
+		<div class="collection-image-wrapper">
+			{% include 'responsive-image' with collection.image, alt: collection.title %}
+		</div>
+	{% endif %}
+{% endif %}
+<style>
+   .template-collection #collections-main .sr-custom-text {
+    padding: 20px 0 0 0;
+}
+  .template-collection #collections-main .sr-custom-text h2 {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+}
+   .template-collection #collections-main .description-content {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 15px;
+}
+</style>
+<div class="container">
+
+{%- assign limit = section.settings.grid | times: section.settings.rows -%}
+{% paginate collection.products by limit %}
+
+<div data-section-id="{{ section.id }}" data-section-type="collection-template">
+
+<div id="collections-main" class="{{ collection.handle }}">
+
+<div class="title-bar custom-font collection-header">
+	{% if collection.handle == 'all' %}
+		<h1>Our Floral Collections - Shop Bouquets, Arrangements, and Gifts</h1>
+	{% else %}
+{% if collection.metafields.custom.title %}
+		<h1>{{ collection.metafields.custom.title }}</h1>
+  {% else %}
+<h1>{{ collection.title }}</h1>
+	{% endif %}
+  {% endif %}
+	<div class="clear"></div>
+</div>
+
+  {% if collection.handle == 'all' %}
+<div class="sr-custom-text">
+<h2>Explore Our Wide Range of Floral Collections for Every Occasion</h2>
+</div>
+{% endif %}
+
+<div class="sr-custom-text">
+<!-- <h1>{{ collection.metafields.custom.title }}</h1> -->
+<h2>{{ collection.metafields.custom.description }}</h2>
+</div>
+  
+	{% if collection.description != empty %}
+		<div class="description-content">{{ collection.description }}</div>
+	{% endif %}
+</div>
+
+
+  
+
+{% if section.settings.tags_enable or section.settings.sort_enable %}
+			<div class="filters-toolbar row">
+				{% if section.settings.tags_enable %}
+					<div class="col-md-3 col-sm-6">
+
+						<div class="clearfix filter">
+						  <label for="sort-by">{{ 'collections.filters.title_tags' | t }}</label>
+						  <select class="coll-filter">
+						    <option value="">{{ 'collections.filters.all_tags' | t }}</option>
+						    {% for tag in collection.all_tags %}
+						    {% if current_tags contains tag %}
+						    <option value="{{ tag | handle }}" selected>{{ tag }}</option>
+						    {% else %}
+						    <option value="{{ tag | handle }}">{{ tag }}</option>
+						    {% endif %}
+						    {% endfor %}
+						  </select>
+						</div>
+
+						<div id="link-to-tag-generic" style="display: none; visibility: hidden;">
+						  {{ 'tag' | link_to_tag: 'tag' }}"
+						</div>
+						{% if collection.handle %}
+						  <input type="hidden" id="link-to-collection" value="/collections/{{ collection.handle }}" />
+						{% elsif collection.products.first.type == collection.title %}
+						  <input type="hidden" id="link-to-collection" value="{{ collection.title | url_for_type }}" />
+						{% elsif collection.products.first.vendor == collection.title %}
+						  <input type="hidden" id="link-to-collection" value="{{ collection.title | url_for_vendor }}" />
+						{% endif %}
+					</div>
+				{% endif %}
+
+				{% if section.settings.sort_enable %}
+					<div class="collection-page--sort-by col-md-3 col-sm-6 {% if section.settings.tags_enable %}col-md-offset-6{% endif %}">
+						{%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+						<label for="sort-by">{{ 'collections.sorting.title' | t }}</label>
+  					<select id="sort-by">
+							<option value="manual">{{ 'collections.sorting.featured' | t }}</option>
+					    <option value="price-ascending">{{ 'collections.sorting.price_ascending' | t }}</option>
+					    <option value="price-descending">{{ 'collections.sorting.price_descending' | t }}</option>
+					    <option value="title-ascending">{{ 'collections.sorting.az' | t }}</option>
+					    <option value="title-descending">{{ 'collections.sorting.za' | t }}</option>
+					    <option value="created-ascending">{{ 'collections.sorting.date_ascending' | t }}</option>
+					    <option value="created-descending">{{ 'collections.sorting.date_descending' | t }}</option>
+					    <option value="best-selling">{{ 'collections.sorting.best_selling' | t }}</option>
+						</select>
+						<input class="collection-header__default-sort" type="hidden" value="{{ collection.default_sort_by }}">
+					</div>
+
+					<input type="hidden" id="collection-sort-by" value="{{ collection.sort_by | default: collection.default_sort_by | escape }}" />
+				{% endif %}
+			</div>
+{% endif %}
+
+  <div class="page-width row" id="Collection">
+
+{% if section.settings.enable_collection_sidebar %}
+
+		{% if section.blocks.size > 0 %}
+
+			<div class="col-md-3" id="collection-sidebar">
+
+				{% for block in section.blocks %}
+
+					{% case block.type %}
+
+						{% when 'vendors' %}
+
+							<div class="collection-sidebar--section" {{ block.shopify_attributes }}>
+								<h2>{{ block.settings.title }}</h2>
+
+								<ul>
+									{% for product_vendor in shop.vendors %}
+									{% assign its_a_match = false %}
+									{% capture my_collection_handle %} {{ product_vendor | handleize | strip | escape  }} {% endcapture %}
+									{% assign my_collection_handle_stripped = my_collection_handle | strip | escape %}
+
+									{% for collection in collections %}
+									{% if my_collection_handle_stripped == collection.handle %}
+									{% assign its_a_match = true %}
+									{% endif %}
+									{% endfor %}
+
+									{% if its_a_match %}
+									<li class="vendor-list-item"><a href="/collections/{{ product_vendor | handleize }}">{{ product_vendor }}</a></li>
+									{% else %}
+									<li class="vendor-list-item">{{ product_vendor | link_to_vendor }}</li>
+									{% endif %}
+									{% endfor %}
+								</ul>
+
+							</div>
+
+						{% when 'text' %}
+
+							<div class="collection-sidebar--section" {{ block.shopify_attributes }}>
+
+								<h2>{{ block.settings.title }}</h2>
+
+								<div class="colletion--sidebar--text--richtext">
+									{{ block.settings.richtext }}
+								</div>
+
+							</div>
+
+						{% when 'menu' %}
+
+							{%- assign collection_linklist = block.settings.collection_linklist -%}
+							{% if linklists[collection_linklist].links.size > 0 %}
+							<div class="collection-sidebar--section" {{ block.shopify_attributes }}>
+								<h2>{{ block.settings.menu_title | escape }}</h2>
+								<ul>
+									{% for link in linklists[collection_linklist].links %}
+										<li {% if link.object.tags and link.object.tags.size > 0 %} class="children"{% endif %}>
+											<a href="{{link.url}}">{{link.title}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% endif %}
+
+						{% when 'image' %}
+
+						{% if block.settings.collection-sidebar-image %}
+							<div class="collection-sidebar--section" {{ block.shopify_attributes }}>
+								{% if block.settings.collection-sidebar-link %}
+									<a href="{{ block.settings.collection-sidebar-link }}" itemprop="url">
+								{% endif %}
+								<div>
+									{% assign alt = block.settings.collection-sidebar-image.alt | default: shop.name %}
+									{% include 'responsive-image' with block.settings.collection-sidebar-image, alt: alt %}
+								</div>
+								{% if block.settings.collection-sidebar-link %}
+									</a>
+								{% endif %}
+							</div>
+						{% endif %}
+
+						{% endcase %}
+
+				{% endfor %}
+
+			</div>
+
+		{% endif %}
+
+{% endif %}
+
+{% if section.settings.enable_collection_sidebar and section.blocks.size > 0 %}
+	<div class="col-md-9">
+{% else %}
+	<div class="col-md-12">
+{% endif %}
+
+      {% case section.settings.grid %}
+			{% when '2' %}
+			{%- assign grid_item_width = 'col-xs-6 col-sm-6 col-md-6 two_columns' -%}
+			{%- assign grid_image_width = '600x600' -%}
+      {% when '3' %}
+      {%- assign grid_item_width = 'col-xs-6 col-sm-4 col-md-4 three_columns' -%}
+      {%- assign grid_image_width = '600x600' -%}
+      {% when '4' %}
+      {%- assign grid_item_width = 'col-xs-6 col-sm-6 col-md-3 four_columns' -%}
+      {%- assign grid_image_width = '600x600' -%}
+			{% when '5' %}
+			{%- assign grid_item_width = 'col-xs-6 col-sm-6 col-md-fifth five_columns' -%}
+      {%- assign grid_image_width = '600x600' -%}
+			{% when '6' %}
+      {%- assign grid_item_width = 'col-xs-6 col-sm-4 col-md-2 six_columns' -%}
+      {%- assign grid_image_width = '600x600' -%}
+      {% endcase %}
+
+      <div class="row product-grid clearfix {% if section.settings.match-height %}products--match-height{% endif %}">
+        {% for product in collection.products %}
+          <div class="grid__item {{ grid_item_width }} indiv-product-wrapper wow zoomIn collection-image-anim
+					{% case section.settings.grid %}
+            {% when '2' %}
+	          	{% cycle ' alpha mobile-clear tablet-clear', ' omega' %}
+            {% when '3' %}
+                {% cycle ' alpha mobile-clear', '', ' mobile-clear omega', 'alpha', ' mobile-clear', ' omega' %}
+            {% when '4' %}
+                {% cycle ' alpha mobile-clear tablet-clear', '', ' mobile-clear tablet-clear', ' omega' %}
+            {% when '5' %}
+								{% cycle ' alpha mobile-clear tablet-clear', '', ' mobile-clear tablet-clear', '', ' omega mobile-clear tablet-clear', ' alpha', ' mobile-clear tablet-clear', '', ' mobile-clear tablet-clear', ' omega' %}
+            {% when '6' %}
+                {% cycle ' alpha mobile-clear tablet-clear', '', ' mobile-clear', ' tablet-clear', ' mobile-clear', ' omega' %}
+            {% endcase %}
+          ">
+
+            <div class="indiv-product">
+
+							{% case section.settings.hover-effect %}
+
+								{% when 'none' %}
+
+								<a class="grid__image" href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
+									{% include 'responsive-image' with product.featured_image, alt: product.title %}
+								</a>
+
+								{% when 'second-image' %}
+
+									{% if product.images.size > 1 %}
+
+										<div class="reveal">
+											<a class="grid__image" href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
+												{% include 'responsive-image' with product.featured_image, alt: product.title %}
+												<div class="hidden">
+													{% include 'responsive-image' with product.images[1], alt: product.images.last.alt %}
+												</div>
+											</a>
+										</div>
+
+									{% else %}
+
+										<a class="grid__image" href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
+											{% include 'responsive-image' with product.featured_image, alt: product.title %}
+										</a>
+
+									{% endif %}
+
+								{% when 'zoom' %}
+
+								<div class="collection-image--zoom-effect">
+									<div class="zoom-effect--inner">
+										<a class="grid__image" href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
+											{% include 'responsive-image' with product.featured_image, alt: product.title %}
+										</a>
+									</div>
+								</div>
+
+								{% endcase %}
+
+            	<div class="hp-title">
+
+					{% if section.settings.show-vendor %}
+						<div class="indiv-product-vendor-text">{{ product.vendor | link_to_vendor }}</div>
+					{% endif %}
+
+            		<a href="{{ product.url | within: collection }}">
+
+            			<div class="indiv-product-title-text">{{ product.title }}</div>
+{% comment %}Start automatically added Judge.me widget{% endcomment %}
+  {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+{% comment %}End automatically added Judge.me widget{% endcomment %}
+
+
+            			<span class="money-styling">
+
+            				{% if product.compare_at_price_max > product.price %}
+            					<h5 class="custom-font compare-at-price">
+            						<span class="money">{{ product.compare_at_price_max | money }}</span>
+            					</h5>
+            				{% endif %}
+
+										{% if product.price_varies %}
+											<small>{{ 'products.general.from' | t }}</small> <span class="money">{{ product.price_min | money }}</span>
+										{% else %}
+											<span class="money">{{ product.price_min | money }}</span>
+										{% endif %}
+
+            			</span>
+
+									{% if section.settings.show_reviews %}
+										<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+									{% endif %}
+            		</a>
+            	</div>
+            </div>
+
+					{% if product.available %}
+						{% if product.compare_at_price_max > product.price and settings.sale_badge %}
+							<div class="sale-badge">{{ 'products.general.sale' | t }}</div>
+						{% endif %}
+					{% else %}
+						<div class="sold-out-badge">{{ 'products.product.sold_out' | t }}</div>
+					{% endif %}
+
+				</div>
+
+        {% else %}
+          {% comment %}
+          Add default products to help with onboarding for collections/all only.
+
+          The onboarding styles and products are only loaded if the
+          store has no products.
+          {% endcomment %}
+          {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+
+            {% for i in (1..8) %}
+
+            <div class="grid__item {{ grid_item_width }} indiv-product-wrapper
+
+            {% case section.settings.grid %}
+							{% when '2' %}
+								{% cycle 'alpha', 'omega' %}
+	            {% when '3' %}
+	            	{% cycle ' alpha', '', ' omega' %}
+	            {% when '4' %}
+	            	{% cycle ' alpha', '', '', ' omega' %}
+							{% when '5' %}
+		            {% cycle ' alpha', '', '', '', ' omega' %}
+							{% when '6' %}
+			           {% cycle ' alpha', '', '', '', '', ' omega' %}
+						{% endcase %}
+
+            ">
+
+            <div class="indiv-product">
+            	<a href="{{ product.url | within: collection }}" title="{{product.title}}">
+	            	{% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+	            	{{ 'product-' | append: current | placeholder_svg_tag: 'icon icon--placeholder animated zoomIn img-responsive' }}
+            	</a>
+            	<div class="hp-title">
+            		<a href="{{ product.url | within: collection }}">
+            			<div class="indiv-product-title-text">{{ 'general.onboarding.product_title' | t }}</div>
+            			<span class="money money-styling">£19.99</span>
+									{% if section.settings.show_reviews %}
+										<a href="#shopify-product-reviews"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></a>
+									{% endif %}
+            		</a>
+            	</div>
+            </div>
+            </div>
+            {% endfor %}
+
+          {% else %}
+            {%- assign is_empty_collection = true -%}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    {% if is_empty_collection %}
+      <div class="grid__item small--text-center">
+        <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+      </div>
+    {% endif %}
+
+    {% include 'pagination' %}
+		
+  	</div>
+	</div>
+</div>
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Collection pages",
+	"max_blocks": 6,
+  "settings": [
+    {
+      "type": "select",
+      "id": "grid",
+      "label": "Products per row",
+      "default": "4",
+      "options": [
+				{
+					"value": "2",
+					"label": "2"
+				},
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+				{
+          "value": "5",
+          "label": "5"
+        },
+				{
+          "value": "6",
+          "label": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "rows",
+      "label": "Rows per page",
+      "default": "6",
+      "options": [
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show-vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+		{
+			"type": "select",
+			"id": "hover-effect",
+			"label": "Hover effect",
+			"default": "zoom",
+			"options": [
+				{
+					"value": "none",
+					"label": "None"
+				},
+				{
+					"value": "zoom",
+					"label": "Zoom"
+				},
+				{
+					"value": "second-image",
+					"label": "Show Second Product Image"
+				}
+			]
+		},
+    {
+      "type": "checkbox",
+      "id": "collection_image_enable",
+      "label": "Show collection image",
+      "default": true
+    },
+		{
+      "type": "checkbox",
+      "id": "sort_enable",
+      "label": "Enable sorting",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "tags_enable",
+      "label": "Enable tag filtering",
+      "default": true
+    },
+		{
+			"type": "header",
+			"content": "Auto-height images"
+		},
+		{
+			"type": "paragraph",
+			"content": "Set all of your images to be the same height"
+		},
+		{
+			"type": "checkbox",
+			"id": "match-height",
+			"label": "Enable auto-height",
+			"default": false
+		},
+		{
+			"type": "header",
+			"content": "Reviews"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_reviews",
+			"label": "Enable",
+			"default": true
+		},
+		{
+			"type": "paragraph",
+			"content": "You will need to install Shopify's [Product Reviews app](https://apps.shopify.com/product-reviews) before enabling this option."
+		},
+		{
+				"type":      "header",
+				"content":   "Sidebar"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_collection_sidebar",
+			"label": "Toggle sidebar content",
+			"default": false,
+			"info": "Create a sidebar by adding content blocks below."
+		}
+		],
+		"blocks": [
+			{
+				"type": "text",
+				"name": "Text",
+				"settings": [
+					{
+						"type": "text",
+						"id": "title",
+						"label": "Heading",
+						"default": "Collection Sidebar Header Text"
+					},
+	        {
+	          "type": "richtext",
+	          "id": "richtext",
+	          "label": "Text",
+						"default": "<p>Share details about promotions or important messages with your customers.</p>"
+	        }
+				]
+			},
+			{
+				"type": "vendors",
+				"name": "Vendors",
+				"limit": 1,
+				"settings": [
+					{
+						"type": "text",
+						"id": "title",
+						"label": "Heading",
+						"default": "Vendors"
+					}
+				]
+			},
+			{
+	      "type": "menu",
+	      "name": "Menu",
+	      "settings": [
+	        {
+	          "type": "text",
+	          "id": "menu_title",
+	          "label": "Heading",
+	          "default": "Links"
+	        },
+	        {
+	          "type": "link_list",
+	          "id": "collection_linklist",
+	          "label": "Menu",
+	          "default": "main-menu"
+	        }
+	      ]
+	    },
+			{
+				"type": "image",
+				"name": "Image",
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "collection-sidebar-image",
+						"label": "Image",
+						"info": "300 x 150px recommended"
+					},
+					{
+						"type": "url",
+						"id": "collection-sidebar-link",
+						"label": "Link",
+						"info": "Optional"
+					}
+				]
+			}
+		]
+}
+{% endschema %}
+<style>
+ /* .template-collection .indiv-product img {
+    max-height: 800px;
+    margin: 0 auto;
+    height: 100%;
+   object-fit: cover;
+} */
+  .template-collection .indiv-product .lazyload-blur-wrapper{
+    /* aspect-ratio: 1; */
+    max-width: 100% !important;
+  }
+
+ .template-collection .indiv-product img
+{
+  aspect-ratio: 1;
+    -o-object-position: center;
+    object-position: center;
+    max-width: 100% !important;
+    vertical-align: bottom;
+    transition: opacity .3s ease-in;
+    width: 100%;
+    object-fit: contain;
+}
+  
+</style>
+  

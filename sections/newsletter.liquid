@@ -1,0 +1,87 @@
+{% case section.settings.colors %}
+  {% when 'white' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--white">
+  {% when 'light' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--light">
+  {% when 'accent' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--accent">
+  {% when 'dark' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--dark">
+{% endcase %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 newsletter--section--grid vertical--align">
+
+        <div class="newsletter--section--grid_inner newsletter_title">
+            {% if section.settings.newsletter_heading %}
+            <h3>{{ section.settings.newsletter_heading }}</h3>
+            {% endif %}
+            {% if section.settings.newsletter_description %}
+              <div class="rte">{{ section.settings.newsletter_description }}</div>
+            {% endif %}
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-5 col-sm-offset-1 newsletter--section--grid vertical--align">
+
+        <div class="newsletter--section--grid_inner newsletter_form">
+          {% include 'newsletter-form' %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "class": "homepage-section--newsletter-wrapper wow fadeIn",
+  "settings": [
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "Color scheme",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "accent",
+          "label": "Feature"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "info": "The colors in each 'scheme' can be changed in the 'General settings' > 'Colors' section of your admin"
+    },
+    {
+      "id": "newsletter_heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Join our Mailing List"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_description",
+      "label": "Subheading"
+    }
+  ],
+  "presets": [
+    {
+    "name": "Newsletter",
+      "category": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

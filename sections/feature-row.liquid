@@ -1,0 +1,188 @@
+{% case section.settings.colors %}
+  {% when 'white' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--white">
+  {% when 'light' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--light">
+  {% when 'accent' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--accent">
+  {% when 'dark' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--dark">
+{% endcase %}
+
+{% case section.settings.image-width %}
+  {% when 'extra-small' %}
+    {%- assign image_width_columns = 2 -%}
+    {%- assign content_width_columns = 10 -%}
+  {% when 'small' %}
+    {%- assign image_width_columns = 3 -%}
+    {%- assign content_width_columns = 9 -%}
+  {% when 'medium' %}
+    {%- assign image_width_columns = 4 -%}
+    {%- assign content_width_columns = 8 -%}
+  {% when 'large' %}
+    {%- assign image_width_columns = 5 -%}
+    {%- assign content_width_columns = 7 -%}
+  {% when 'extra-large' %}
+    {%- assign image_width_columns = 6 -%}
+    {%- assign content_width_columns = 6 -%}
+{% endcase %}
+
+<div class="container">
+	<div class="row">
+
+<div class="index-section col-md-12">
+  <div class="page-width feature-row homepage-featured-content">
+    {% capture image_layout %}
+      <div class="feature-row__item col-md-{{ image_width_columns }} col-xs-12">
+        {% if section.settings.image != blank %}
+          {% include 'responsive-image' with section.settings.image, alt: section.settings.image.alt, class: 'feature-row__image' %}
+        {% else %}
+        {{ 'image' | placeholder_svg_tag: 'icon icon--placeholder' }}
+        {% endif %}
+      </div>
+    {% endcapture %}
+
+	<div class="row">
+    <div class="feature-row">
+      {% if section.settings.layout == 'left' %}
+        {{ image_layout }}
+      {% endif %}
+
+      <div class="feature-row__item feature-row__text feature-row__text--{{ section.settings.layout }} col-md-{{ content_width_columns }} col-xs-12">
+        {% if section.settings.title != blank %}
+          <h2><span>{{ section.settings.title | escape }}</span></h2>
+        {% endif %}
+        {% if section.settings.text_block != blank %}
+          <div class="rte featured-row__subtext textarea">{{ section.settings.text_block }}</div>
+        {% endif %}
+        {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+          <a href="{{ section.settings.button_link }}" class="btn btn-custom">
+            {{ section.settings.button_label }}
+          </a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.layout == 'right' %}
+        {{ image_layout }}
+      {% endif %}
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "class": "homepage-section--text-and-image-wrapper wow fadeIn",
+  "settings": [
+		{
+			"type": "select",
+			"id": "colors",
+			"label": "Color scheme",
+			"default": "white",
+			"options": [
+				{
+					"value": "white",
+					"label": "White"
+				},
+				{
+					"value": "light",
+					"label": "Light"
+				},
+				{
+					"value": "accent",
+					"label": "Feature"
+				},
+				{
+					"value": "dark",
+					"label": "Dark"
+				}
+			],
+			"info": "The colors in each 'scheme' can be changed in the 'General settings' > 'Colors' section of your admin"
+		},
+    {
+      "type": "select",
+      "id": "image-width",
+      "label": "Image width",
+      "default": "medium",
+      "options": [
+        {
+          "value": "extra-small",
+          "label": "Extra small"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "extra-large",
+          "label": "Extra large"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+			"info": "600 x 600px recommended"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Image on left"
+        },
+        {
+          "value": "right",
+          "label": "Image on right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Image with text"
+    },
+    {
+      "type": "richtext",
+      "id": "text_block",
+      "label": "Text",
+      "default": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "info": "Required to show the button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

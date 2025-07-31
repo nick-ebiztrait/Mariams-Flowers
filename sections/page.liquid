@@ -1,0 +1,139 @@
+{% case section.settings.colors %}
+  {% when 'white' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--white">
+  {% when 'light' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--light">
+  {% when 'accent' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--accent">
+  {% when 'dark' %}
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--dark">
+{% endcase %}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-12">
+
+      {% if section.settings.page != blank %}
+
+        {% if section.settings.page_title %}
+          <div class="title-bar {{ settings.title-bar-styling }} custom-font">
+            <h2><span>{{ pages[ section.settings.page ].title | escape }}</span></h2>
+            <div class="clear"></div>
+          </div>
+        {% endif %}
+
+      {% else %}
+
+        {% if section.settings.page_title %}
+          <div class="title-bar {{ settings.title-bar-styling }} custom-font">
+            <h2><span>Your page title</span></h2>
+            <div class="clear"></div>
+          </div>
+        {% endif %}
+
+      {% endif %}
+
+    </div>
+
+    <div class="homepage-indiv-section-wrapper grid--full homepage-page-wrapper">
+      {% case section.settings.width %}
+        {% when 'small' %}
+          <div class="col-md-6 col-md-offset-3 homepage-page">
+        {% when 'medium' %}
+          <div class="col-md-8 col-md-offset-2 homepage-page">
+        {% when 'large' %}
+          <div class="col-md-10 col-md-offset-1 homepage-page">
+        {% when 'full-width' %}
+          <div class="col-md-12 homepage-page">
+      {% endcase %}
+
+          <div class="rte featured-row__subtext content">
+
+            {% if section.settings.page != blank %}
+              {{ pages[ section.settings.page ].content }}
+            {% else %}
+              Please select a page to include. Pages contain information that rarely changes or that customers will reference often, such as an "About Us" page, or a "Contact Us" page.
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page",
+  "class": "homepage-section--page-wrapper wow fadeIn",
+  "settings": [
+    {
+      "type": "select",
+      "id": "colors",
+      "label": "Color scheme",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "accent",
+          "label": "Feature"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        }
+      ],
+      "info": "The colors in each 'scheme' can be changed in the 'General settings' > 'Colors' section of your admin"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "medium",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+       "type": "page",
+       "id": "page",
+       "label": "Content Page"
+    },
+    {
+       "type": "checkbox",
+       "id": "page_title",
+       "default": true,
+       "label": "Show page title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
