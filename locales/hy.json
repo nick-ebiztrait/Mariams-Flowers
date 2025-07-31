@@ -1,0 +1,128 @@
+{
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "title": "Delivery method",
+        "waiting_on_rate_notice": "Please wait while we fetch available delivery rates...",
+        "no_rates_for_cart_or_destination_notice": "There are no delivery methods available for your cart or destination.",
+        "no_rates_for_country_notice": "We do not offer delivery to {{country}}.",
+        "please_enter_your_shipping_information_notice": "Please enter your delivery information"
+      },
+      "contact": {
+        "phone_label": "Your phone number",
+        "optional_phone_label": "Your phone number (optional)",
+        "phone_placeholder": "Your phone number",
+        "optional_phone_placeholder": "Your phone number (optional)",
+        "first_name_label": "Your first name",
+        "optional_first_name_label": "Your first name (optional)",
+        "first_name_placeholder": "Your first name (optional)",
+        "last_name_label": "Your last name",
+        "optional_last_name_label": "Your last name (optional)",
+        "last_name_placeholder": "Your last name",
+        "optional_last_name_placeholder": "Your last name (optional)",
+        "shipping_address_title": "Delivery address"
+      },
+      "general": {
+        "continue_to_shipping_method": "Continue to delivery methods",
+        "back_to_shipping_method": "Return to delivery method",
+        "edit_shipping_address": "Edit delivery address",
+        "edit_shipping_method": "Edit delivery method"
+      },
+      "order_summary": {
+        "free_shipping_discount_label": "Free delivery",
+        "shipping_label": "Delivery",
+        "discount_requires_customer_notice": "Please submit your delivery information to apply the {{code}} discount code",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Your delivery information does not meet the requirements for the {{code}} discount code"
+      },
+      "shipping_title": "Store Pickup",
+      "payment": {
+        "same_billing_address_label": "Same as delivery address"
+      },
+      "thank_you": {
+        "marker": {
+          "shipping": "Delivery address",
+          "current": "Current delivery location"
+        },
+        "shipping_address_title": "Delivery address",
+        "order_updates_subscribe_to_email_notifications": "Get delivery updates by email",
+        "order_updates_subscribe_to_phone_notifications": "Get delivery updates by email or SMS",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Get delivery updates by SMS",
+        "shipping_information_title": "Delivery information",
+        "shipping_method_title": "Delivery method",
+        "confirmed_description_html": "We have accepted your order, and we are getting it ready. A confirmation email has been sent to {{ email }}. Come back to this page for updates on your delivery status.",
+        "no_tracking_number": "There is no tracking number for this delivery.",
+        "unfulfilled_items_title": "Preparing for delivery",
+        "unfulfilled_items_description": "We are currently preparing these items for delivery.",
+        "fulfillment": {
+          "unfulfilled_table_title": "Items preparing for delivery",
+          "fulfilled_table_title": "Items in this delivery"
+        },
+        "login_title": "Login to view all delivery details",
+        "failed_title": "We could not deliver your order",
+        "delivered_description_html": "Your order has been delivered to the address you provided. If you haven't received it, or if you have any other problems, please {{ contact_us }}.",
+        "delivered_title": "Your order has been delivered",
+        "attempted_delivery_description_html": "An attempt was made to deliver your order but it was unsuccessful. Please {{ contact_us }} to arrange another delivery attempt.",
+        "attempted_delivery_title": "An attempt was made to delivery your order",
+        "out_for_delivery_description_html": "Your order is on the delivery truck - expect it to arrive today. If you still haven't received it in the next 2 days, please {{ contact_us }}.",
+        "out_for_delivery_title": "Your order is out for delivery",
+        "in_transit_description": "Come back to this page for updates on your delivery status.",
+        "in_transit_title": "Your order is on the way",
+        "confirmed_title": "Your delivery is confirmed"
+      },
+      "shipping_errors": {
+        "shipping_method": "Your cart has been modified and the delivery rate you previously selected no longer applies. Please select a new rate."
+      }
+    },
+    "notices": {
+      "cart": {
+        "shipping_address_not_required": "This cart does not require delivery",
+        "shipping_address_invalid": "Invalid delivery address"
+      }
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  }
+}

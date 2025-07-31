@@ -1,0 +1,102 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "phone_label": "Your phone number",
+        "optional_phone_label": "Your phone number (optional)",
+        "phone_placeholder": "Your phone number",
+        "optional_phone_placeholder": "Your phone number (optional)",
+        "shipping_address_title": "Pickup address",
+        "first_name_label": "Your first name",
+        "optional_first_name_label": "Your first name (optional)",
+        "first_name_placeholder": "Your first name (optional)",
+        "optional_first_name_placeholder": "Your first name",
+        "last_name_label": "Your last name",
+        "optional_last_name_label": "Your last name (optional)",
+        "last_name_placeholder": "Your last name",
+        "optional_last_name_placeholder": "Your last name (optional)"
+      },
+      "delivery_options": {
+        "shipping_address": "Pickup address"
+      },
+      "thank_you": {
+        "marker": {
+          "shipping": "Pickup address",
+          "current": "Pickup address"
+        },
+        "shipping_address_title": "Pickup address",
+        "order_updates_subscribe_to_email_notifications": "Get pickup updates by email",
+        "order_updates_subscribe_to_phone_notifications": "Get pickup updates by email or SMS",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Get pickup updates by SMS"
+      },
+      "general": {
+        "continue_to_shipping_method": "Continue",
+        "back_to_shipping_method": "Back",
+        "edit_shipping_address": "Edit",
+        "edit_shipping_method": "Edit"
+      },
+      "order_summary": {
+        "free_shipping_discount_label": "Free pickup",
+        "shipping_label": "Store Pickup"
+      },
+      "shipping": {
+        "shipping_method_title": "Pickup method",
+        "delivery_title": "Pickup address",
+        "waiting_on_rate_notice": "Please wait while we fetch available pickup rates...",
+        "no_rates_for_cart_or_destination_notice": "Pickup is not available for your cart or destination.",
+        "no_rates_for_country_notice": "We do not offer pickups in {{ country }}.",
+        "please_enter_your_shipping_information_notice": "Please go back to the shopping cart page and choose a pickup location."
+      },
+      "payment": {
+        "same_billing_address_label": "Do not select",
+        "same_billing_address_checkbox_label": "Do not select"
+      },
+      "shipping_title": "Store Pickup"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  }
+}
