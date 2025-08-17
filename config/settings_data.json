@@ -449,7 +449,7 @@
             "type": "text",
             "settings": {
               "title": "Contact us",
-              "richtext": "<p>For questions, inquiries, events or custom designs please contact us at: </p><p></p><p>mariamsflowers21@gmail.com</p><p>(818) 503-3000 </p>"
+              "richtext": "<p>For questions, inquiries, events or custom designs please contact us at: </p><p></p><p>mariamsflowers21@gmail.com</p><p>hello@mariamsflowers.com</p><p>(818) 503-3000 </p>"
             }
           },
           "footer-1": {
@@ -472,6 +472,7 @@
           "footer-1",
           "1560801330710"
         ],
+        "custom_css": [],
         "settings": {
           "show_methods_of_payment": true
         }
