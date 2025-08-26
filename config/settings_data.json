@@ -859,6 +859,22 @@
           "show-slide-arrows": false,
           "slider-arrow--color": "#707070"
         }
+      },
+      "collection_7UyFjk": {
+        "type": "collection",
+        "name": "Featured collection",
+        "settings": {
+          "colors": "white",
+          "title": "FALL COLLECTION",
+          "show-vendor": false,
+          "hover-effect": "zoom",
+          "collection": "autumn-collection-1",
+          "grid": "4",
+          "rows": 5,
+          "show_view_all": false,
+          "match-height": false,
+          "show_reviews": true
+        }
       }
     },
     "content_for_index": [
@@ -869,6 +885,7 @@
       "image-bar",
       "collection_FYfKUG",
       "1563410061503",
+      "collection_7UyFjk",
       "162457030741399fda",
       "1588131716830",
       "collection",
