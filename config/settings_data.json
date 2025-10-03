@@ -869,9 +869,9 @@
           "show-vendor": false,
           "hover-effect": "zoom",
           "collection": "autumn-collection-1",
-          "grid": "4",
+          "grid": "5",
           "rows": 5,
-          "show_view_all": false,
+          "show_view_all": true,
           "match-height": false,
           "show_reviews": true
         }
