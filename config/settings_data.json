@@ -679,7 +679,7 @@
         "type": "text-over-image",
         "settings": {
           "image": "shopify://shop_images/1.Banner-1.jpg",
-          "title": "Box & Vase Flower Arrangements, Luxury Birthday Flowers and Wrapped Bouquets",
+          "title": "Box & Vase Flower Arrangements, Luxury Birthday Flowers and Wrapped Bouquets FREE DELIVERY",
           "text": "",
           "parallax": false,
           "alignment": "center",
@@ -804,6 +804,7 @@
       },
       "collection_FYfKUG": {
         "type": "collection",
+        "disabled": true,
         "custom_css": [
           ".grid__item {margin-bottom: 1px; margin-top: 1px; padding-right: 2px; padding-left: 2px;}",
           ".money-styling {padding-top: 1px; padding-bottom: 1px; font-size: 18px; font-weight: 200; text-align: left;}",
@@ -883,10 +884,10 @@
       "16023664928b45a1b4",
       "1600295174350",
       "image-bar",
-      "collection_FYfKUG",
-      "1563410061503",
       "collection_7UyFjk",
       "162457030741399fda",
+      "collection_FYfKUG",
+      "1563410061503",
       "1588131716830",
       "collection",
       "slideshow",
