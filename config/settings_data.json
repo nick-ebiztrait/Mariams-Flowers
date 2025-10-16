@@ -722,10 +722,10 @@
         ],
         "settings": {
           "colors": "white",
-          "title": "Summer's Best Blooms",
+          "title": "luxury collection",
           "show-vendor": false,
           "hover-effect": "zoom",
-          "collection": "summer-collection",
+          "collection": "luxury-collection",
           "grid": "4",
           "rows": 5,
           "show_view_all": true,
