@@ -863,6 +863,12 @@
       },
       "collection_7UyFjk": {
         "type": "collection",
+        "custom_css": [
+          ".grid__item {margin-bottom: 1px; margin-top: 1px; padding-right: 2px; padding-left: 2px;}",
+          ".money-styling {padding-top: 1px; padding-bottom: 1px; font-size: 18px; font-weight: 200; text-align: left;}",
+          ".hp-title {padding-top: 1px; padding-left: 6px;}",
+          ".indiv-product {font-size: 18px; font-weight: 450; text-align: left;}"
+        ],
         "name": "Featured collection",
         "settings": {
           "colors": "white",
@@ -885,11 +891,11 @@
       "1600295174350",
       "image-bar",
       "collection_7UyFjk",
-      "162457030741399fda",
+      "collection",
       "collection_FYfKUG",
       "1563410061503",
       "1588131716830",
-      "collection",
+      "162457030741399fda",
       "slideshow",
       "1584560516495",
       "16518742680e436de3",
