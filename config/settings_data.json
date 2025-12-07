@@ -866,10 +866,10 @@
         "name": "Featured collection",
         "settings": {
           "colors": "white",
-          "title": "FALL COLLECTION",
+          "title": "Holiday COLLECTION",
           "show-vendor": false,
           "hover-effect": "zoom",
-          "collection": "autumn-collection-1",
+          "collection": "holiday-collection",
           "grid": "5",
           "rows": 5,
           "show_view_all": true,
