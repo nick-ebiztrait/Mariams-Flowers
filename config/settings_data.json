@@ -876,7 +876,7 @@
           "show-vendor": false,
           "hover-effect": "zoom",
           "collection": "holiday-collection",
-          "grid": "5",
+          "grid": "4",
           "rows": 5,
           "show_view_all": true,
           "match-height": false,
