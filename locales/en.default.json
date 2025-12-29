@@ -405,7 +405,7 @@
         "continue_to_shipping_method": "Continue to Delivery",
         "back_to_shipping_method": "Return to Delivery ",
         "choose_shipping_method": "Choose a Delivery method",
-        "choose_payment_method": "Choose payment method (Only USA Issued Cards) "
+        "choose_payment_method": "Choose payment method (Only USA Issued Cards). "
       },
       "delivery_options": {
         "shipping_address": "Delivery Address",
