@@ -253,7 +253,25 @@
 			{% endunless %}
 
 			{{ content_for_layout }}
-
+{% if template contains 'checkout' %}
+<div style="
+background:#f7f7f7;
+border:2px solid #bcbcbc;
+color:#333;
+padding:16px;
+margin:20px auto;
+max-width:700px;
+font-size:16px;
+text-align:center;
+border-radius:10px;
+">
+<strong>Payment Policy</strong><br><br>
+We accept U.S.–issued debit and credit cards only.<br>
+Cards issued outside of the United States will not be approved.<br><br>
+Please ensure you are using a U.S.–issued card before placing your order.<br>
+Orders attempted with foreign cards will be declined.
+</div>
+{% endif %}
 			{% unless template == "index" or template == "collection" %}
 				</div>
 			{% endunless %}
