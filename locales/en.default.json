@@ -431,6 +431,9 @@
       "field_errors": {
         "shipping_line_phone_blank": "Enter Receivers Phone Number that is not the same as yours. ",
         "shipping_line_phone_invalid": "Enter a valid phone number for Receivers"
+      },
+      "payment": {
+        "title": "Choose payment method (Only USA Issued Cards) "
       }
     }
   }
