@@ -272,21 +272,6 @@
           "show_reviews": true
         }
       },
-      "text-over-image-1": {
-        "type": "text-over-image",
-        "disabled": true,
-        "settings": {
-          "image": "shopify://shop_images/IMG_0018.jpeg",
-          "title": "About Us",
-          "text": "<p>At Mariam&#x27;s Flowers we have made it our mission to provide love through flowers to the Van Nuys and neighboring cities by providing fresh cut flowers and luxurious designs at affordable prices. Since 2000 we have been the talk of town when it comes to every day arrangements.  At Mariam&#x27;s Flowers we know that your everyday and just because flowers are just as important as your special magical moments. It&#x27;s those little moments that lead to the life changing moments. It is the single red rose on a first date that will lead to the fairy tale wedding. It is the small gesture of thank you, a bouquet, that will lead to a life long loyal friendship. This is why we provide the best and highest quality of flowers nature can make. We make your small moments perfect to lead you to your perfect special moments.</p>",
-          "parallax": true,
-          "alignment": "center",
-          "hero_size": "large",
-          "text-over-image-width": "full-width",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
       "text-adverts": {
         "type": "text-adverts",
         "blocks": {
@@ -487,48 +472,6 @@
           "notification-bar--text-colour": "#ffffff"
         }
       },
-      "1560645497890": {
-        "type": "indiv-product",
-        "disabled": true,
-        "settings": {
-          "colors": "white",
-          "title": "Featured Product",
-          "featured_product": "fuchsia-rose-classic",
-          "image-placement": "left",
-          "cart-action": "added",
-          "product_variant_style": "dropdowns",
-          "show_discount": "hide",
-          "show-vendor": false,
-          "show_sku": false,
-          "show_quantity_selector": false,
-          "show_smart_checkout": false,
-          "show_product_description": true,
-          "pick_an_option": false,
-          "hide_out_of_stock": false,
-          "show_reviews": true
-        }
-      },
-      "1560646395159": {
-        "type": "indiv-product",
-        "disabled": true,
-        "settings": {
-          "colors": "white",
-          "title": "",
-          "featured_product": "touch-of-gold",
-          "image-placement": "left",
-          "cart-action": "added",
-          "product_variant_style": "dropdowns",
-          "show_discount": "hide",
-          "show-vendor": false,
-          "show_sku": false,
-          "show_quantity_selector": false,
-          "show_smart_checkout": false,
-          "show_product_description": true,
-          "pick_an_option": false,
-          "hide_out_of_stock": false,
-          "show_reviews": true
-        }
-      },
       "collection-template": {
         "type": "collection-template",
         "custom_css": [
@@ -621,27 +564,6 @@
           "show_reviews": true
         }
       },
-      "1584556252433": {
-        "type": "video",
-        "settings": {
-          "video_heading": "",
-          "url": "https://youtu.be/dHIH6Z_cZIk",
-          "autoplay": false,
-          "loop": true,
-          "mute": false,
-          "width_classes": "video-width--50"
-        }
-      },
-      "1584560516495": {
-        "type": "page",
-        "disabled": true,
-        "settings": {
-          "colors": "white",
-          "width": "medium",
-          "page": "20",
-          "page_title": true
-        }
-      },
       "1588131716830": {
         "type": "collection",
         "custom_css": [
@@ -663,18 +585,6 @@
           "show_reviews": true
         }
       },
-      "1594093069341": {
-        "type": "rich-text",
-        "disabled": true,
-        "settings": {
-          "colors": "white",
-          "width": "medium",
-          "title": "About Us",
-          "text": "<p>At Mariam's Flowers we have made it our mission to provide love through flowers to the Van Nuys and neighboring cities by providing fresh cut flowers and luxurious designs at affordable prices. Since 2000 we have been the talk of town when it comes to every day arrangements.  At Mariam's Flowers we know that your everyday flowers are just as important as your special event flowers. It's those little moments that lead to the life changing moments. It is the single red rose on a first date that will lead to the fairy tale wedding. It is the bouquet to an acquaintance  that will lead to a life long loyal friendship. This is why we provide the best and highest quality of flowers nature can make. We make your small moments perfect to lead you to your perfect special moments.</p>",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
       "1600295174350": {
         "type": "text-over-image",
         "settings": {
@@ -687,28 +597,6 @@
           "text-over-image-width": "fixed",
           "button_label": "Explore Now",
           "button_link": "shopify://collections/all"
-        }
-      },
-      "16023664928b45a1b4": {
-        "type": "text-over-image",
-        "disabled": true,
-        "settings": {
-          "image": "shopify://shop_images/Artsakh_flag.png",
-          "title": "25% OF ALL  ONLINE SALES WILL BE DONATED",
-          "text": "<p>For the month of October, 25% of all online sales will go to the Armenia Fund to help the people of Artsakh during the Nagorno-Karabakh Azerbaijan Aggression </p>",
-          "parallax": true,
-          "alignment": "center",
-          "hero_size": "medium",
-          "text-over-image-width": "full-width",
-          "button_label": "MORE INFO",
-          "button_link": "shopify://pages/nagorno-karabakh-war"
-        }
-      },
-      "1605743464b2f40e25": {
-        "type": "judgeme_carousel_section",
-        "disabled": true,
-        "settings": {
-          "maxwidth": 1080
         }
       },
       "162457030741399fda": {
@@ -737,62 +625,13 @@
         "type": "pagefly-home",
         "settings": {}
       },
-      "16518742680e436de3": {
-        "type": "rich-text",
-        "disabled": true,
-        "settings": {
-          "colors": "white",
-          "width": "medium",
-          "title": "Mother's day 5/8/22",
-          "text": "<p>Dear Customers, </p><p>We are currently not taking any more orders for Mother's Day. We will be servicing Walk-In customers for Sunday. We have plenty of bouquets and arrangements available for purchase from our Mother's Day Collection and much more. We will be open 9am till 4pm. See you all Sunday!</p>",
-          "button_label": "",
-          "button_link": ""
-        }
-      },
-      "slideshow_YKpAUj": {
-        "type": "slideshow",
-        "blocks": {
-          "image_QfkJ3t": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/love.png",
-              "mobile_image": "shopify://shop_images/Pre-Order_Today-2.png",
-              "title": "",
-              "text": "",
-              "button_text": "",
-              "link": "shopify://collections/mothers-day-2",
-              "caption-background": "{{ shop.brand.colors.primary[0].background }}",
-              "caption-text": "{{ shop.brand.colors.primary[0].background }}",
-              "button-text": "{{ shop.brand.colors.primary[0].background }}",
-              "button-background": "{{ shop.brand.colors.primary[0].background }}",
-              "horizontal-alignment": "left",
-              "vertical-alignment": "middle"
-            }
-          }
-        },
-        "block_order": [
-          "image_QfkJ3t"
-        ],
-        "disabled": true,
-        "settings": {
-          "slider-animation": "slide",
-          "slider-width": "full-width",
-          "slider-slide-time": 5,
-          "caption-heading-size": 50,
-          "caption-subheading-size": 20,
-          "caption-button-size": 16,
-          "show-slide-dots": false,
-          "show-slide-arrows": true,
-          "slider-arrow--color": "#707070"
-        }
-      },
       "custom_html_8kGgBx": {
         "type": "custom-html",
         "blocks": {
           "html_MA4wGE": {
             "type": "html",
             "settings": {
-              "code": "<div class=\"row\" bis_skin_checked=\"1\">\n\n      \n      <div class=\"col-md-12\" bis_skin_checked=\"1\">\n        <div class=\"title-bar title-bar-lowercase custom-font\" bis_skin_checked=\"1\">\n          <h1><span>About Us</span></h1>\n          <div class=\"clear\" bis_skin_checked=\"1\"></div>\n        </div>\n      </div>\n      \n\n      <div class=\"homepage-indiv-section-wrapper grid--full homepage-featured-content-wrapper\" bis_skin_checked=\"1\">\n        \n            <div class=\"col-md-8 col-md-offset-2 col-xs-12 homepage-featured-rich-text\" bis_skin_checked=\"1\">\n          \n\n          \n            <div class=\"rte featured-row__subtext textarea\" bis_skin_checked=\"1\"><p>At Mariam's Flowers we have made it our mission to provide love through flowers to the Van Nuys and neighboring cities by providing fresh cut flowers and luxurious designs at affordable prices. Since 2000 we have been the talk of town when it comes to every day arrangements.  At Mariam's Flowers we know that your everyday flowers are just as important as your special event flowers. It's those little moments that lead to the life changing moments. It is the single red rose on a first date that will lead to the fairy tale wedding. It is the bouquet to an acquaintance  that will lead to a life long loyal friendship. This is why we provide the best and highest quality of flowers nature can make. We make your small moments perfect to lead you to your perfect special moments.</p></div>\n          \n\n          \n\n        </div>\n      </div>\n    </div>",
+              "code": "<div class=\"row\" bis_skin_checked=\"1\">\n\n      \n      <div class=\"col-md-12\" bis_skin_checked=\"1\">\n        <div class=\"title-bar title-bar-lowercase custom-font\" bis_skin_checked=\"1\">\n          <h1><span>About Us</span></h1>\n          <div class=\"clear\" bis_skin_checked=\"1\"></div>\n        </div>\n      </div>\n      \n\n      <div class=\"homepage-indiv-section-wrapper grid--full homepage-featured-content-wrapper\" bis_skin_checked=\"1\">\n        \n            <div class=\"col-md-8 col-md-offset-2 col-xs-12 homepage-featured-rich-text\" bis_skin_checked=\"1\">\n          \n\n          \n            <div class=\"rte featured-row__subtext textarea\" bis_skin_checked=\"1\"><p>At Mariam’s Flowers, we believe flowers are more than a gift — they are a language of love, celebration, comfort, and connection.\n\n\n\nFounded in the heart of Los Angeles, Mariam’s Flowers was created to bring European-inspired floral artistry to everyday moments. Each arrangement is thoughtfully handcrafted using premium blooms, hand-selected for their beauty, freshness, and longevity. Nothing is mass-produced. Nothing is rushed. Every bouquet is designed with intention — just for you.\n\n\n\nOur signature style blends soft romantic textures, full garden-style designs, and modern luxury wrapping, creating arrangements that feel both elegant and deeply personal. Whether you are celebrating a birthday, welcoming a new baby, honoring a loved one, or simply reminding someone they are cherished, we treat every order as if it were our own.\n\n\n\nWhat truly sets Mariam’s Flowers apart is our commitment to care. From the moment your flowers are designed to the moment they are delivered, your order is handled by real florists who care about the story behind your gift. We take pride in reliable same-day delivery across Los Angeles and surrounding areas — because timing matters just as much as beauty.\n\n\n\nMariam’s Flowers is not a factory florist. We are a boutique floral house built on craftsmanship, trust, and heart. Our mission is simple: to turn your meaningful moments into unforgettable memories, one bouquet at a time.\n\n\n\nThank you for choosing us to be part of your celebrations, milestones, and moments that matter most.\n</p></div>\n          \n\n          \n\n        </div>\n      </div>\n    </div>",
               "width": "100%"
             }
           }
@@ -801,65 +640,6 @@
           "html_MA4wGE"
         ],
         "settings": {}
-      },
-      "collection_FYfKUG": {
-        "type": "collection",
-        "disabled": true,
-        "custom_css": [
-          ".grid__item {margin-bottom: 1px; margin-top: 1px; padding-right: 2px; padding-left: 2px;}",
-          ".money-styling {padding-top: 1px; padding-bottom: 1px; font-size: 18px; font-weight: 200; text-align: left;}",
-          ".hp-title {padding-top: 1px; padding-left: 6px;}",
-          ".indiv-product {font-size: 18px; font-weight: 450; text-align: left;}"
-        ],
-        "settings": {
-          "colors": "white",
-          "title": "Free Delivery",
-          "show-vendor": false,
-          "hover-effect": "zoom",
-          "collection": "250-and-up",
-          "grid": "4",
-          "rows": 3,
-          "show_view_all": true,
-          "match-height": false,
-          "show_reviews": true
-        }
-      },
-      "slideshow_3HPa7q": {
-        "type": "slideshow",
-        "blocks": {
-          "image_UrkBtw": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/1.Banner-1.jpg",
-              "mobile_image": "shopify://shop_images/1.Banner-1.jpg",
-              "title": "Box & Vase Flower Arrangements, Luxury Birthday Flowers and Wrapped Bouquets",
-              "text": "",
-              "button_text": "Explore Now",
-              "link": "shopify://collections/all",
-              "caption-background": "rgba(0,0,0,0)",
-              "caption-text": "#000000",
-              "button-text": "#ffffff",
-              "button-background": "#5cb85c",
-              "horizontal-alignment": "left",
-              "vertical-alignment": "middle"
-            }
-          }
-        },
-        "block_order": [
-          "image_UrkBtw"
-        ],
-        "disabled": true,
-        "settings": {
-          "slider-animation": "fade",
-          "slider-width": "fixed",
-          "slider-slide-time": 5,
-          "caption-heading-size": 50,
-          "caption-subheading-size": 20,
-          "caption-button-size": 16,
-          "show-slide-dots": false,
-          "show-slide-arrows": false,
-          "slider-arrow--color": "#707070"
-        }
       },
       "collection_7UyFjk": {
         "type": "collection",
@@ -885,30 +665,13 @@
       }
     },
     "content_for_index": [
-      "slideshow_3HPa7q",
-      "slideshow_YKpAUj",
-      "16023664928b45a1b4",
       "1600295174350",
-      "image-bar",
       "collection_7UyFjk",
       "collection",
-      "collection_FYfKUG",
       "1563410061503",
       "1588131716830",
       "162457030741399fda",
-      "slideshow",
-      "1584560516495",
-      "16518742680e436de3",
-      "1560645497890",
-      "1560646395159",
-      "1594093069341",
-      "custom_html_8kGgBx",
-      "1584556252433",
-      "collection-list",
-      "text-over-image-1",
-      "1605743464b2f40e25",
-      "testimonials",
-      "newsletter"
+      "custom_html_8kGgBx"
     ],
     "blocks": {
       "15683396631634586217": {
