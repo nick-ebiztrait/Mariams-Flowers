@@ -628,16 +628,24 @@
       "custom_html_8kGgBx": {
         "type": "custom-html",
         "blocks": {
-          "html_MA4wGE": {
+          "html_nBYPCn": {
             "type": "html",
             "settings": {
-              "code": "<div class=\"row\" bis_skin_checked=\"1\">\n\n      \n      <div class=\"col-md-12\" bis_skin_checked=\"1\">\n        <div class=\"title-bar title-bar-lowercase custom-font\" bis_skin_checked=\"1\">\n          <h1><span>About Us</span></h1>\n          <div class=\"clear\" bis_skin_checked=\"1\"></div>\n        </div>\n      </div>\n      \n\n      <div class=\"homepage-indiv-section-wrapper grid--full homepage-featured-content-wrapper\" bis_skin_checked=\"1\">\n        \n            <div class=\"col-md-8 col-md-offset-2 col-xs-12 homepage-featured-rich-text\" bis_skin_checked=\"1\">\n          \n\n          \n            <div class=\"rte featured-row__subtext textarea\" bis_skin_checked=\"1\"><p>At Mariam’s Flowers, we believe flowers are more than a gift — they are a language of love, celebration, comfort, and connection.\n\n\n\nFounded in the heart of Los Angeles, Mariam’s Flowers was created to bring European-inspired floral artistry to everyday moments. Each arrangement is thoughtfully handcrafted using premium blooms, hand-selected for their beauty, freshness, and longevity. Nothing is mass-produced. Nothing is rushed. Every bouquet is designed with intention — just for you.\n\n\n\nOur signature style blends soft romantic textures, full garden-style designs, and modern luxury wrapping, creating arrangements that feel both elegant and deeply personal. Whether you are celebrating a birthday, welcoming a new baby, honoring a loved one, or simply reminding someone they are cherished, we treat every order as if it were our own.\n\n\n\nWhat truly sets Mariam’s Flowers apart is our commitment to care. From the moment your flowers are designed to the moment they are delivered, your order is handled by real florists who care about the story behind your gift. We take pride in reliable same-day delivery across Los Angeles and surrounding areas — because timing matters just as much as beauty.\n\n\n\nMariam’s Flowers is not a factory florist. We are a boutique floral house built on craftsmanship, trust, and heart. Our mission is simple: to turn your meaningful moments into unforgettable memories, one bouquet at a time.\n\n\n\nThank you for choosing us to be part of your celebrations, milestones, and moments that matter most.\n</p></div>\n          \n\n          \n\n        </div>\n      </div>\n    </div>",
+              "code": "<div style=\"text-align:center; padding: 50px 0;\">\n<h2>About Us</h2>\nAt Mariam’s Flowers, we believe flowers are more than a gift; they are a language of love, celebration, comfort, and connection. <div> \n\n\n\nFounded in the heart of Los Angeles, Mariam’s Flowers was created to bring European-inspired floral artistry to everyday moments. Each arrangement is thoughtfully handcrafted using premium blooms, hand-selected for their beauty, freshness, and longevity. Nothing is mass-produced. Nothing is rushed. Every bouquet is designed with intention just for you.<div>\n\n\n\nOur signature style blends soft romantic textures, full garden-style designs, and modern luxury wrapping, creating arrangements that feel both elegant and deeply personal. Whether you are celebrating a birthday, welcoming a new baby, honoring a loved one, or simply reminding someone they are cherished, we treat every order as if it were our own.<div>\n\n\n\nWhat truly sets Mariam’s Flowers apart is our commitment to care. From the moment your flowers are designed to the moment they are delivered, your order is handled by real florists who care about the story behind your gift. We take pride in reliable same-day delivery across Los Angeles and surrounding areas — because timing matters just as much as beauty.<div>\n\n\n\nMariam’s Flowers is not a factory florist. We are a boutique floral house built on craftsmanship, trust, and heart. Our mission is simple: to turn your meaningful moments into unforgettable memories, one bouquet at a time.\n\n\n\nThank you for choosing us to be part of your celebrations, milestones, and moments that matter most.</div>\n</div>\n</div>\n</div>\n</div>",
+              "width": "100%"
+            }
+          },
+          "html_34XJFJ": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align:center; padding: 50px 0;\">\n<h2>Our Team</h2>\nBehind every bouquet is a team that truly cares.\n\n\n\nOur florists are trained in boutique, European-inspired floral design and share one common belief — that every arrangement should feel intentional, personal, and beautifully made. From hand-selecting premium blooms to carefully styling each bouquet, our team takes pride in the details that transform flowers into meaningful gifts.\n\n\n\nWe are not a production line. We are a close-knit floral house that values craftsmanship, reliability, and genuine customer care. Every order is prepared by real hands, guided by real experience, and delivered with real heart.</div>",
               "width": "100%"
             }
           }
         },
         "block_order": [
-          "html_MA4wGE"
+          "html_nBYPCn",
+          "html_34XJFJ"
         ],
         "settings": {}
       },
