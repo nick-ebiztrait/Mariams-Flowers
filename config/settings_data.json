@@ -566,6 +566,7 @@
       },
       "1588131716830": {
         "type": "collection",
+        "disabled": true,
         "custom_css": [
           ".grid__item {margin-bottom: 1px; margin-top: 1px; padding-right: 2px; padding-left: 2px;}",
           ".money-styling {padding-top: 1px; padding-bottom: 1px; font-size: 18px; font-weight: 200; text-align: left;}",
