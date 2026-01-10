@@ -661,10 +661,10 @@
         "name": "Featured collection",
         "settings": {
           "colors": "white",
-          "title": "Holiday COLLECTION",
+          "title": "Mariam Atelier - Couture Florals",
           "show-vendor": false,
           "hover-effect": "zoom",
-          "collection": "holiday-collection",
+          "collection": "mariam-atelier",
           "grid": "4",
           "rows": 5,
           "show_view_all": true,
@@ -675,10 +675,10 @@
     },
     "content_for_index": [
       "1600295174350",
-      "collection_7UyFjk",
-      "collection",
       "1563410061503",
       "1588131716830",
+      "collection",
+      "collection_7UyFjk",
       "162457030741399fda",
       "custom_html_8kGgBx"
     ],
